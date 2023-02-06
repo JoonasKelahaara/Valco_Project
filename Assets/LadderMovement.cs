@@ -38,6 +38,7 @@ public class LadderMovement : MonoBehaviour
         if (col.CompareTag("Ladder"))
         {
             isLadder = true;
+            isClimbing = true;
         }
     }
 
