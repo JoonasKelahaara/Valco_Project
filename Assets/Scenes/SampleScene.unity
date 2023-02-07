@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayPoint: {fileID: 1572418366}
   grabPoint: {fileID: 1775298917}
-  rayDistance: 1
+  rayDistance: 0.2
 --- !u!212 &5228958160523509782
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1513,7 +1513,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.3018868, g: 0.12544434, b: 0, a: 1}
   m_FlipX: 0
