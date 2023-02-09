@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 335921593396213681}
   - component: {fileID: 335921593396213686}
   - component: {fileID: 335921593396213687}
+  - component: {fileID: 8191923125523221094}
   m_Layer: 8
   m_Name: Box
   m_TagString: IgnoreCollision
@@ -158,3 +159,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8191923125523221094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335921593396213684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32c26ab5b2106f44bac7de989e7c4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 100
