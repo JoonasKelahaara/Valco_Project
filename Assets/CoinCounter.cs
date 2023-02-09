@@ -6,7 +6,6 @@ using TMPro;
 public class CoinCounter : MonoBehaviour
 {
     public static CoinCounter instance;
-
     public TMP_Text coinText;
     public int currentCoins = 0;
 

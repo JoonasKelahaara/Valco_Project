@@ -23,6 +23,7 @@ public class GrabObjects : MonoBehaviour
 
         if(hitInfo.collider != null && hitInfo.collider.gameObject.layer == layerIndex)
         {
+
             if(Input.GetKeyDown(KeyCode.E) && box == null)
             {
                 box = hitInfo.collider.gameObject;
