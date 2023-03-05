@@ -20,7 +20,7 @@ public class nappi : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void onMouseUp()
+    private void OnMouseUp()
     {
         isUp = !isUp;
         isOn = !isOn;
