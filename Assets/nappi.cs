@@ -15,7 +15,7 @@ public class nappi : MonoBehaviour
         up.SetActive(isUp);
         if (isOn)
         {
-
+            Main.Instance.SwitchChange(1);
         }
     }
 
@@ -26,5 +26,13 @@ public class nappi : MonoBehaviour
         isOn = !isOn;
         on.SetActive(isOn);
         up.SetActive(isUp);
+        if (isOn)
+        {
+            Main.Instance.SwitchChange(1);
+        }
+        else
+        {
+            Main.Instance.SwitchChange(-1);
+        }
     }
 }
