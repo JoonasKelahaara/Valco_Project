@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Machine3 : MonoBehaviour
 {
-/*     public GameObject player;
-    public GameObject machine3;
-    public GameObject machine3Popup;
-    public GameObject Clock;
-    public GameObject CoinText;
-    public GameObject Player; */
+    public GameObject Completed_Text;
     public List<Color> _wireColors = new List<Color>();
     public List<Wire> _leftWires = new List<Wire>();
     public List<Wire> _rightWires = new List<Wire>();
     private List<Color> _availableColors;
     private List<int> _availableLeftWireIndex;
     private List<int> _availableRightWireIndex;
+    public Wire CurrentDraggedWire;
+    public Wire CurrentHoveredWire;
+    public bool IsTaskCompleted = false;
 
     private void Start()
     {
@@ -38,19 +36,28 @@ public class Machine3 : MonoBehaviour
             _availableLeftWireIndex.RemoveAt(pickedLeftWireIndex);
             _availableRightWireIndex.RemoveAt(pickedRightWireIndex);
         }
+            StartCoroutine(CheckTaskCompletion());
     }
 
+    private IEnumerator CheckTaskCompletion() {
+        while(!IsTaskCompleted) {
+            int successfullWires = 0;
 
-/*     void Update()
-    {
-        if ((machine3.transform.position - player.transform.position).sqrMagnitude < 5.0f && Input.GetKeyDown(KeyCode.E))
-        {
-            //ottaa muun uin pois, est�� hahmoa liikkumasta ja avaa minipeli ikkunan
-            CoinText.SetActive(false);
-            Clock.SetActive(false);
-            Player.SetActive(false);
-            machine3Popup.SetActive(true);
+            for (int i = 0; i < _rightWires.Count; i++) {
+                if(_rightWires[i].IsSuccess) {
+                    successfullWires++;
+                }
+
+                if(successfullWires >= _rightWires.Count) {
+                    Debug.Log("Task Successfull!");
+                    IsTaskCompleted = true;
+                    Completed_Text.SetActive(true);
+                } else {
+                    Debug.Log("Task in progress...");
+                }
+
+                yield return new WaitForSeconds(0.5f);
+            }
         }
-            
-    } */
+    }
 }
