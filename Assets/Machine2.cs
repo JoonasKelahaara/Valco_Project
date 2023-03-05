@@ -22,13 +22,11 @@ public class Machine2 : MonoBehaviour
     {
         if ((machine2.transform.position - player.transform.position).sqrMagnitude < 5.0f && Input.GetKeyDown(KeyCode.E))
         {
-            //ottaa muun uin pois, estää hahmoa liikkumasta ja avaa minipeli ikkunan
+            //ottaa muun uin pois, estï¿½ï¿½ hahmoa liikkumasta ja avaa minipeli ikkunan
             CoinText.SetActive(false);
             Clock.SetActive(false);
             Player.SetActive(false);
             machine2Popup.SetActive(true);
-
-
         }
             
     }
