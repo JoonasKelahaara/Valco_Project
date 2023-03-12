@@ -8,23 +8,27 @@ public class Machine1 : MonoBehaviour
     public float spawnRate = 2;
     private float timer = 0;
     public float widthOffset = 10;
+    public Machine3 _wireTask;
+    public Main _lightTask;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer < spawnRate)
-        {
+        if (_wireTask.IsTaskCompleted && _lightTask.isTaskCompleted){
+            Debug.Log("Tasks Completed");
             timer = timer + Time.deltaTime;
-        }
-        else
-        {
             spawnBox();
             timer = 0;
+            //Ei resetaa taskeja, mutta lopettaa loputtoman box spawnin 
+            _wireTask.IsTaskCompleted = false;
+            _lightTask.isTaskCompleted = false;
+        } else {
+            Debug.Log("Tasks in progress");
         }
 
         

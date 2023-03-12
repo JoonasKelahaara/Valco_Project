@@ -9,6 +9,7 @@ public class Main : MonoBehaviour
     public int switchCount;
     public GameObject winText;
     private int onCount = 0;
+    public bool isTaskCompleted = false;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class Main : MonoBehaviour
         if (onCount == switchCount)
         {
             winText.SetActive(true);
+            isTaskCompleted = true;
         }
     }
 }

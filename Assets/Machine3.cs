@@ -15,7 +15,7 @@ public class Machine3 : MonoBehaviour
     public Wire CurrentHoveredWire;
     public bool IsTaskCompleted = false;
 
-    private void Start()
+    public void Start()
     {
         _availableColors = new List<Color>(_wireColors);
         _availableLeftWireIndex = new List<int>();
@@ -56,7 +56,7 @@ public class Machine3 : MonoBehaviour
                     Debug.Log("Task in progress...");
                 }
 
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.2f);
             }
         }
     }
